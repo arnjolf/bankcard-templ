@@ -1,0 +1,384 @@
+.form__box {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 400px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px 40px 25px;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.132);
+  margin-top: 100px;
+}
+
+.form__card {
+  width: 100%;
+  max-width: 360px;
+  min-height: 220px;
+  position: relative;
+  perspective: 1000px;
+  top: -50px;
+  font-family: "Source Code Pro";
+  color: white;
+  box-sizing: border-box;
+}
+
+.form__card_front {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/card-background.jpg);
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: all 1s ease-in-out;
+  border-radius: 10px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form__card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.form__card-chip {
+  width: 50px;
+  height: 35px;
+}
+
+.form__card-bank {
+  width: 75px;
+  height: 40px;
+}
+
+.form__card-bank_mc {
+  width: 60px;
+}
+
+.form__card-number {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 10% 0 0;
+  margin-bottom: auto;
+  justify-content: space-between;
+}
+
+.form__card-digit {
+  font-weight: 500;
+  line-height: 1;
+  font-size: 25px;
+}
+
+.form__card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.form__card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__card-span {
+  opacity: 0.9;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 5px;
+}
+
+.form__card-expdate {
+  margin: 0;
+}
+
+.form__card-name {
+  margin: 0;
+}
+
+.form__card_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 1s ease-in-out;
+  border-radius: 10px;
+  background-image: url(../images/card-background.jpg);
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  padding: 15px 0;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form__card-swipeline {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 35px;
+  margin: 0 0 10px 0;
+}
+
+.form__card-cvvbox {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 0 auto 15px;
+}
+
+.form__card-cvvspan {
+  width: 100%;
+  text-align: right;
+  font-size: 12px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.form__card-cvvband {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  justify-content: end;
+  align-items: center;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.form__card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.card-front_turned {
+  transform: rotateY(180deg);
+}
+
+.card-back_turned {
+  transform: rotateY(360deg);
+}
+
+.form__grid {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "number number number"
+    "name name name"
+    "month year cvv"
+    "button button button";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 50px);
+  column-gap: 20px;
+  row-gap: 28px;
+  height: fit-content;
+}
+
+.form__label {
+  position: absolute;
+  font-size: 12px;
+  color: #1a3b5d;
+  top: -18px;
+  left: 5px;
+}
+
+.form__password {
+  position: absolute;
+  background-color: rgb(211, 211, 211);
+  height: 100%;
+  width: 25px;
+  top: 0;
+  right: 0;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  background-image: url(../images/show.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+input {
+  height: 100%;
+  padding: 5px 12px;
+  border: 1px solid #ced6e0;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form__select {
+  height: 50px;
+  padding: 8px 12px;
+  border: 1px solid #ced6e0;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form__select:hover {
+  border: 1px solid #3d9cff;
+}
+
+.form__select:focus {
+  border: 1px solid #3d9cff;
+  box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
+}
+
+input:hover {
+  border: 1px solid #3d9cff;
+}
+
+input:focus {
+  border: 1px solid #3d9cff;
+  box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
+}
+
+.form__number {
+  grid-area: number;
+  position: relative;
+}
+
+.form__name {
+  grid-area: name;
+  position: relative;
+}
+
+.form__month {
+  grid-area: month;
+  position: relative;
+}
+
+.form__year {
+  grid-area: year;
+}
+
+.form__cvv {
+  grid-area: cvv;
+  position: relative;
+}
+
+.form__button {
+  grid-area: button;
+  outline: none;
+  background-color: #2364d2;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__button:hover {
+  box-shadow: 0px 5px 10px 0px rgba(22, 0, 120, 0.2);
+}
+
+.form__button:focus {
+  box-shadow: 0px 5px 10px 0px rgba(22, 0, 120, 0.2);
+}
+
+@media (max-width: 390px) {
+  input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .form__select {
+    height: 100%;
+  }
+
+  .form__box {
+    padding: 30px 20px;
+  }
+
+  .form__grid {
+    row-gap: 24px;
+    grid-template-rows: repeat(auto-fit, 45px);
+  }
+
+  .form__button {
+    height: 45px;
+  }
+
+  .form__card {
+    min-height: 180px;
+    max-width: 290px;
+  }
+
+  .form__card-top {
+    margin-bottom: 33px;
+  }
+
+  .form__card-chip {
+    width: 40px;
+    height: 30px;
+  }
+
+  .form__card-bank {
+    width: 60px;
+    height: auto;
+  }
+
+  .form__card-number {
+    padding: 0 15% 0 0;
+  }
+
+  .form__card-digit {
+    font-size: 18px;
+  }
+
+  .form__card-content {
+    padding: 5px 0;
+  }
+
+  .form__card-span {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .form__card-name {
+    font-size: 13px;
+  }
+
+  .form__card-expdate {
+    font-size: 13px;
+  }
+
+  .form__card-swipeline {
+    height: 30px;
+    margin: 0 0 15px 0;
+  }
+
+  .form__card-cvvband {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .form__card-cvvspan {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+}
